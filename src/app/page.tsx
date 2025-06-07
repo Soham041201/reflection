@@ -22,14 +22,12 @@ export default function Home() {
         <h1 className="text-7xl mb-8 leading-tight">soham sattigeri</h1>
         <div className="text-2xl md:text-3xl mb-8 text-muted-foreground">
           <p>
-            associate software engineer at{" "}
-            <span className="text-primary">kodo</span>
+            founding team software engineer at{" "}
+            <span className="text-primary">kily.ai</span>
           </p>
-          <p className="mt-2">web & flutter developer</p>
         </div>
         <p className="text-xl max-w-3xl leading-relaxed text-muted-foreground">
-          currently shipping cool stuff with modern technologies and passionate
-          about teaching developers.
+          building and shipping products for crafting next generation ads.
         </p>
       </section>
 
