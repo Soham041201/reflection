@@ -4,14 +4,16 @@ import { Layout } from "@/components/layout/Layout";
 import ClientBody from "./ClientBody";
 
 export const metadata: Metadata = {
-  title: "siddharth / reflection",
-  description: "thoughts on life, tech, and growth.",
-  metadataBase: new URL("https://blog.notcodesid.xyz"),
+  title: "Soham Sattigeri - Software Engineer",
+  description:
+    "Associate Software Engineer at Kodo. Full-stack developer passionate about creating impactful web experiences and teaching technology.",
+  metadataBase: new URL("https://soham-portfolio.netlify.app"),
   openGraph: {
-    title: "reflection",
-    description: "thoughts on life, tech, and growth.",
-    url: "https://blog.notcodesid.xyz/",
-    siteName: "reflection",
+    title: "Soham Sattigeri - Software Engineer",
+    description:
+      "Associate Software Engineer at Kodo. Full-stack developer passionate about creating impactful web experiences and teaching technology.",
+    url: "https://soham-portfolio.netlify.app/",
+    siteName: "Soham Sattigeri Portfolio",
     images: [
       {
         url: "/opengraph.png",
@@ -32,9 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClientBody>
-        <Layout>
-          {children}
-        </Layout>
+        <Layout>{children}</Layout>
       </ClientBody>
     </html>
   );
