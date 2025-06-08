@@ -18,43 +18,51 @@ export default function Writing() {
   const posts = [
     {
       title: "The Joy of Writing Code",
-      slug: "https://medium.com/@sattigeri.soham/the-joy-of-writing-code-662a8312f2cd",
+      slug: "the-joy-of-writing-code",
+      mediumUrl:
+        "https://medium.com/@sattigeri.soham/the-joy-of-writing-code-662a8312f2cd",
       description:
-        "A reflection on the fundamental excitement that drives quality software craftsmanship. Exploring how earning money through software is the outcome, not the goal, and finding those precious 'Aha!' moments in technology.",
-      date: "Oct 20, 2024",
+        "A reflection on the fundamental excitement that drives quality software craftsmanship. Exploring how earning money through software is the outcome, not the goal, and what it means to truly love the craft of coding.",
       category: "philosophy",
+      date: "October 20, 2024",
+      readTime: "4 min read",
       featured: true,
-      external: true,
     },
     {
       title: "Information, Knowledge, and Wisdom",
-      slug: "https://medium.com/@sattigeri.soham/information-knowledge-and-wisdom-4d9b196c66c2",
+      slug: "information-knowledge-and-wisdom",
+      mediumUrl:
+        "https://medium.com/@sattigeri.soham/information-knowledge-and-wisdom-4d9b196c66c2",
       description:
-        "Distinguishing between raw data (information), refined understanding (knowledge), and the pure, visionary insights that come from within (wisdom). Exploring why wisdom can never be passed on directly.",
-      date: "Oct 13, 2024",
+        "An exploration of the hierarchical relationship between information, knowledge, and wisdom. Understanding how data transforms into insight and eventually into profound understanding that guides our decisions.",
       category: "philosophy",
+      date: "October 13, 2024",
+      readTime: "5 min read",
       featured: true,
-      external: true,
     },
     {
       title: "Conveniently Absurd",
-      slug: "https://medium.com/@sattigeri.soham/conveniently-absurd-25b4d63f66dd",
+      slug: "conveniently-absurd",
+      mediumUrl:
+        "https://medium.com/@sattigeri.soham/conveniently-absurd-25b4d63f66dd",
       description:
-        "An exploration of convenient absurdism - how we become absurdist when life doesn't go as planned, and revert when it does. Examining how thoughts, speech, and writing differ, and why absurdism might not be real.",
-      date: "Oct 6, 2024",
+        "A philosophical examination of how we navigate the absurdity of existence by creating convenient narratives and meaning structures that help us function in an inherently meaningless world.",
       category: "philosophy",
+      date: "October 6, 2024",
+      readTime: "6 min read",
       featured: false,
-      external: true,
     },
     {
       title: "Life is Delusional",
-      slug: "https://medium.com/@sattigeri.soham/life-is-delusional-f52f0939d953",
+      slug: "life-is-delusional",
+      mediumUrl:
+        "https://medium.com/@sattigeri.soham/life-is-delusional-f52f0939d953",
       description:
-        "An honest examination of the delusions we create - from CS freshmen thinking programming is easy to gym-goers expecting instant results. Exploring the paradox of whether being delusional is good or bad.",
-      date: "Sep 29, 2024",
+        "A contemplation on the necessary delusions we maintain to find purpose and direction. Examining how our constructed realities and beliefs shape our experience of existence.",
       category: "philosophy",
+      date: "September 29, 2024",
+      readTime: "4 min read",
       featured: false,
-      external: true,
     },
   ];
 
@@ -125,24 +133,20 @@ export default function Writing() {
               .map((post) => (
                 <Link
                   key={post.slug}
-                  href={post.slug}
-                  target={post.external ? "_blank" : undefined}
-                  rel={post.external ? "noopener noreferrer" : undefined}
+                  href={`/writing/${post.slug}`}
                   className="group"
                 >
                   <article className="p-6 border border-border rounded-lg hover:bg-muted/20 transition-colors h-full">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="px-2 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                      <span className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full font-medium">
                         {post.category}
                       </span>
                       <span className="text-muted-foreground text-sm">
                         {post.date}
                       </span>
-                      {post.external && (
-                        <span className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
-                          Medium
-                        </span>
-                      )}
+                      <span className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
+                        {post.readTime}
+                      </span>
                     </div>
 
                     <h3 className="text-xl mb-3 group-hover:text-primary transition-colors">
@@ -154,9 +158,7 @@ export default function Writing() {
                     </p>
 
                     <div className="flex items-center gap-2 text-primary">
-                      <span className="text-sm">
-                        {post.external ? "read on medium" : "read more"}
-                      </span>
+                      <span className="text-sm">read more</span>
                       <ArrowIcon />
                     </div>
                   </article>
@@ -175,9 +177,7 @@ export default function Writing() {
             {posts.map((post) => (
               <Link
                 key={post.slug}
-                href={post.slug}
-                target={post.external ? "_blank" : undefined}
-                rel={post.external ? "noopener noreferrer" : undefined}
+                href={`/writing/${post.slug}`}
                 className="group block"
               >
                 <article className="p-6 border border-border rounded-lg hover:bg-muted/20 transition-colors">
@@ -190,17 +190,15 @@ export default function Writing() {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className="px-2 py-1 bg-muted text-muted-foreground text-sm rounded-full">
+                      <span className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full font-medium">
                         {post.category}
                       </span>
                       <span className="text-muted-foreground text-sm">
                         {post.date}
                       </span>
-                      {post.external && (
-                        <span className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
-                          Medium
-                        </span>
-                      )}
+                      <span className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
+                        {post.readTime}
+                      </span>
                     </div>
                   </div>
 
