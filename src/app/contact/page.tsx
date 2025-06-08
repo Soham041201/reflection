@@ -243,7 +243,7 @@ export default function Contact() {
                   <span className="text-primary">💼</span>
                   <div>
                     <p className="font-medium">
-                      associate software engineer at kodo
+                      founding software engineer at kily.ai
                     </p>
                     <p className="text-muted-foreground text-sm">
                       currently shipping cool stuff
@@ -253,9 +253,11 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <span className="text-primary">⏰</span>
                   <div>
-                    <p className="font-medium">open to freelance projects</p>
+                    <p className="font-medium">
+                      open to <s>freelance projects</s> coffee
+                    </p>
                     <p className="text-muted-foreground text-sm">
-                      evenings & weekends
+                      feel free to reach out anytime
                     </p>
                   </div>
                 </div>

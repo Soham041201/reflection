@@ -85,7 +85,7 @@ export default function Home() {
               <h3 className="text-xl font-serif">writing</h3>
             </div>
             <p className="text-muted-foreground">
-              thoughts on tech, philosophy, and growth
+              thoughts on tech, philosophy, research, and growth
             </p>
           </Link>
         </div>
