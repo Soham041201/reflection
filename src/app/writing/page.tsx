@@ -23,7 +23,18 @@ const ResearchCard = ({
   isExpanded,
   onToggle,
 }: {
-  paper: any;
+  paper: {
+    title: string;
+    authors: string[];
+    journal: string;
+    volume: string;
+    year: string;
+    doi: string;
+    abstract: string;
+    keywords: string[];
+    institution: string;
+    achievements: string[];
+  };
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
