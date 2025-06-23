@@ -7,12 +7,20 @@ export const metadata: Metadata = {
   title: "Soham Sattigeri - Software Engineer",
   description:
     "Associate Software Engineer at Kodo. Full-stack developer passionate about creating impactful web experiences and teaching technology.",
-  metadataBase: new URL("https://soham-portfolio.netlify.app"),
+  metadataBase: new URL("https://sohamsattigeri.com"),
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   openGraph: {
     title: "Soham Sattigeri - Software Engineer",
     description:
       "Associate Software Engineer at Kodo. Full-stack developer passionate about creating impactful web experiences and teaching technology.",
-    url: "https://soham-portfolio.netlify.app/",
+    url: "https://sohamsattigeri.com",
     siteName: "Soham Sattigeri Portfolio",
     images: [
       {

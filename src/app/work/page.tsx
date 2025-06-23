@@ -13,30 +13,95 @@ const ArrowIcon = () => (
 );
 
 export default function Work() {
+  // Add custom CSS animations
+  const animationStyles = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  `;
+
+  // Insert styles
+  if (typeof document !== "undefined") {
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = animationStyles;
+    if (!document.head.querySelector("style[data-work-animations]")) {
+      styleSheet.setAttribute("data-work-animations", "true");
+      document.head.appendChild(styleSheet);
+    }
+  }
   const workExperience = [
+    {
+      company: "kily.ai",
+      role: "founding team engineer",
+      period: "2025 - present",
+      link: "https://kily.ai",
+      description:
+        "as a part of the founding time, i'm currently spending my time building the infra for the ads ecosystem. my major work revolves around building data pipelines and services to ingest and process data from various sources.",
+      achievements: [
+        "build the entire e2e data pipeline from `git init` to ingest data from amazon ads, amazon sp, blinkit, swiggy instamart, etc currently which handles a traffic of around 100k records per day.",
+        "rewritten the entire chat interface from http stream API to websocket API to handle real-time communication with the users.",
+        "worked on the categorization system of search keywords to categorise them into classes giving users insight on their ads performance.",
+        "revamped the entire front-end interface to support API caching, middleware integration, and other features to improve the user experience.",
+      ],
+      current: true,
+    },
     {
       company: "kodo",
       role: "associate software engineer",
-      period: "2023 - present",
+      period: "2023 - 2025",
+      link: "https://kodo.com",
       description:
-        "currently shipping cool stuff and building production-ready features",
+        "internship turned fulltime, kodo was my first gig as an engineer where i build (or atleast tried to) the next generation form platform",
       achievements: [
-        "promoted from internship to full-time role",
-        "collaborating with cross-functional teams",
-        "developing scalable web applications",
+        "Engineered custom components in Formio to support the unique requirements of the P2P process, ensuring efficient handling of form data and integration with existing systems.",
+        "Designed and optimized microservices communication using RabbitMQ, ensuring reliable, asynchronous message processing between procurement services for improved scalability and fault tolerance.",
       ],
-      current: true,
+      current: false,
     },
     {
       company: "dukaan",
       role: "software engineer intern",
       period: "2023",
+      link: "https://dukaan.com",
       description:
-        "worked on dukaan help, a chatbot for resolving customer support tickets",
+        "worked on 'luna', a dukaan help chatbot for resolving customer support tickets",
       achievements: [
-        "built chatbot for customer support automation",
-        "collaborated with talented team members",
-        "gained experience in customer-facing products",
+        "Built a Python back-end service using FastAPI, integrating WebSockets to handle 1,000+ daily conversations for over 5,000 sellers, ensuring real-time chatbot interactions.",
+        "Implemented a Retrieval-Augmented Generation (RAG) pipeline with OpenAI and K-Nearest Neighbors (KNN), enhancing chatbot responses with contextual understanding.",
+        "Developed a PostgreSQL-based indexer to structure vendor data, leveraging Pinecone for semantic vector embedding to optimize retrieval and fine-tuning.",
+      ],
+      current: false,
+    },
+    {
+      company: "leazkart",
+      role: "co-founder/cto",
+      period: "2023 - 2024",
+      link: "https://leazkart.com",
+      description: "an attempt to build an airbnb but for vehicles",
+      achievements: [
+        "Led the end-to-end development of Leazkart's mobile application, mentoring a team while architecting complex features, and implemented a real-time vehicle availability system using WebSockets and Express.js.",
+        "Demonstrated technical versatility by driving backend development and orchestrating a cost-effective DevOps infrastructure on Google Cloud Engine, including CI/CD pipelines and custom subnet architecture.",
+        "Spearheaded the selection of an optimized technology stack, aligning it with business objectives and market demands, and collaborated closely with stakeholders to refine project requirements while recruiting and nurturing specialized talent.",
+        "Assumed co-founder responsibilities, balancing technical leadership with strategic business management, conducting thorough market analyses, and maintaining strong investor relations through regular updates on product development and strategic initiatives.",
       ],
       current: false,
     },
@@ -48,56 +113,109 @@ export default function Work() {
         {/* Header */}
         <section className="mb-16 mt-8">
           <h1 className="text-6xl mb-8">work</h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
-            building software solutions and growing as a developer in
-            early-stage companies focused on innovation.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            my work has been revolving around early-stage startups in their 0-1
+            stage. while i obsess over technology, i take ownership in my work
+            in building tools for the long term.
+          </p>
+          <br />
+
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            here are the few spaceships i have been a part of till date
           </p>
         </section>
 
         <div className="section-divider"></div>
 
-        {/* Experience */}
+        {/* Experience Timeline */}
         <section className="mb-16">
           <h2 className="text-3xl mb-8">experience</h2>
 
-          <div className="space-y-8">
-            {workExperience.map((job, index) => (
-              <div key={index} className="relative">
-                <div className="p-6 border border-border rounded-lg">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-2xl">{job.company}</h3>
-                        {job.current && (
-                          <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full">
-                            current
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-xl text-primary mb-2">{job.role}</p>
-                      <p className="text-muted-foreground">{job.description}</p>
-                    </div>
-                    <div className="mt-4 md:mt-0 md:text-right">
-                      <span className="text-sm text-muted-foreground font-mono">
-                        {job.period}
-                      </span>
-                    </div>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-[23px] top-0 bottom-0 w-0.5 bg-border"></div>
+
+            <div className="space-y-12">
+              {workExperience.map((job, index) => (
+                <div
+                  key={index}
+                  className="group relative flex items-start gap-8 transition-all duration-500 hover:transform hover:translate-y-[-2px]"
+                  style={{
+                    animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`,
+                  }}
+                >
+                  {/* Timeline dot */}
+                  <div className="relative flex-shrink-0 flex items-center justify-center w-12">
+                    <div
+                      className={`w-3 h-3 rounded-full border-2 transition-all duration-300 group-hover:scale-125 ${
+                        job.current
+                          ? "bg-primary border-primary"
+                          : "bg-background border-border group-hover:bg-primary group-hover:border-primary"
+                      }`}
+                    ></div>
+                    {job.current && (
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-primary/20 animate-pulse"></div>
+                    )}
+                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
 
-                  <div className="mt-6">
-                    <h4 className="text-lg mb-3">key contributions</h4>
-                    <ul className="space-y-2 text-muted-foreground">
-                      {job.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="text-primary mt-2">•</span>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0 p-6 rounded-lg transition-all duration-300 group-hover:bg-muted/20 border border-transparent group-hover:border-primary/20">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <a
+                            href={job.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-2xl font-serif text-foreground hover:text-primary transition-colors duration-300 group-hover:underline"
+                          >
+                            {job.company}
+                          </a>
+                          {job.current && (
+                            <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full animate-pulse">
+                              current
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xl text-primary mb-2 group-hover:text-primary/80 transition-colors">
+                          {job.role}
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {job.description}
+                        </p>
+                      </div>
+                      <div className="mt-4 md:mt-0 md:text-right flex-shrink-0">
+                        <span className="text-sm text-muted-foreground font-mono bg-muted/30 px-3 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+                          {job.period}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-6">
+                      <h4 className="text-lg mb-4 font-serif text-primary opacity-90">
+                        key contributions
+                      </h4>
+                      <div className="space-y-4">
+                        {job.achievements.map((achievement, i) => (
+                          <p
+                            key={i}
+                            className="text-muted-foreground leading-relaxed text-base border-l-2 border-muted/30 pl-4 group-hover:border-primary/30 transition-colors duration-300"
+                            style={{
+                              animation: `scaleIn 0.4s ease-out ${
+                                index * 0.2 + i * 0.1 + 0.3
+                              }s both`,
+                            }}
+                          >
+                            {achievement}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
@@ -165,30 +283,27 @@ export default function Work() {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Connect */}
         <section className="mb-16">
-          <div className="p-8 bg-muted/20 rounded-lg text-center">
-            <h2 className="text-3xl mb-4">let's work together</h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-              interested in collaborating or discussing opportunities? let's
-              connect and explore how we can build something great.
+          <h2 className="text-3xl mb-8">let's connect</h2>
+          <div className="space-y-4">
+            <p className="text-xl text-muted-foreground mb-6">
+              interested in collaborating or just having a chat?
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-wrap gap-6">
               <a
                 href="mailto:sattigeri.soham@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                <span>get in touch</span>
-                <ArrowIcon />
+                email
               </a>
               <a
                 href="https://www.linkedin.com/in/soham-sattigeri-062bb1179/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                <span>connect on linkedin</span>
-                <ArrowIcon />
+                linkedin
               </a>
             </div>
           </div>

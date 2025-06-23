@@ -5,10 +5,6 @@ export default function About() {
         {/* Header */}
         <section className="mb-16 mt-8">
           <h1 className="text-6xl mb-8">about me</h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
-            passionate software engineer building impactful web experiences and
-            sharing knowledge with the developer community.
-          </p>
         </section>
 
         <div className="section-divider"></div>
@@ -16,23 +12,16 @@ export default function About() {
         {/* Introduction */}
         <section className="mb-16">
           <p className="text-xl leading-relaxed mb-6">
-            hi, i'm soham! currently working as an associate software engineer
-            at
-            <span className="text-primary font-medium"> kodo</span>, where i
-            build production-ready features and collaborate with talented teams
-            to create meaningful digital experiences.
+            hi, i'm soham sattigeri! these days i have been spending my time
+            understanding the ads ecosystem in the era of ai and quick-commerce.
+            i am a nerd for philosophy and love to code.
           </p>
           <p className="text-xl leading-relaxed mb-6">
-            my journey in tech started with a curiosity about how websites work,
-            which led me to dive deep into full-stack development. i love the
-            intersection of design and functionality, always striving to create
-            applications that are both beautiful and performant.
-          </p>
-          <p className="text-xl leading-relaxed">
-            beyond coding, i'm passionate about teaching and mentoring. i've
-            conducted bootcamps and workshops, sharing knowledge about modern
-            web technologies and helping aspiring developers kickstart their
-            careers.
+            my journey in tech started with a angela yu's flutter course, which
+            had me drolling down in the world of computer science and
+            engineering. since then, i have worked in a bunch of startups, had
+            my own stint at a failed startup as a cto and 2 years later, i'm
+            here.
           </p>
         </section>
 
@@ -48,10 +37,13 @@ export default function About() {
               </h3>
               <span className="text-muted-foreground">pune, india</span>
             </div>
-            <p className="text-muted-foreground mb-2">bachelor's degree</p>
+            <p className="text-muted-foreground mb-2">
+              bachelor's degree ~ electronics and telecommunication engineering
+            </p>
             <p className="text-lg">
-              gained strong foundations in computer science, data structures,
-              algorithms, and software engineering principles.
+              while my degree has no relevance to what i work in, my interests
+              in soldering wires, breaking rasberry pies and playing with 8081
+              microcontrollers continue till date.
             </p>
           </div>
         </section>
@@ -64,26 +56,30 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">continuous learning</h3>
+              <h3 className="text-xl mb-3 text-primary">1st principles</h3>
               <p className="text-muted-foreground">
-                technology evolves rapidly, and i believe in staying curious and
-                adapting to new tools and methodologies.
+                i may not know everything, but i know how to distil a topic into
+                smaller problems. this mental model helps me understand the root
+                of things and build solutions that are more robust and scalable.
               </p>
             </div>
 
             <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">quality craft</h3>
+              <h3 className="text-xl mb-3 text-primary">
+                agency over accountability
+              </h3>
               <p className="text-muted-foreground">
-                i take pride in writing clean, maintainable code and creating
-                experiences that users genuinely enjoy.
+                i believe in taking ownership of my work and being accountable
+                for the results. results &gt;&gt; process.
               </p>
             </div>
 
             <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">knowledge sharing</h3>
+              <h3 className="text-xl mb-3 text-primary">curiosity</h3>
               <p className="text-muted-foreground">
-                teaching and mentoring others not only helps the community but
-                also strengthens my own understanding.
+                i believe in staying curious and learning new things. i believe
+                in the power of curiosity and the ability to ask the right
+                questions.
               </p>
             </div>
           </div>
@@ -96,10 +92,11 @@ export default function About() {
           <h2 className="text-3xl mb-8">beyond code</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl leading-relaxed mb-4">
-              when i'm not coding, you'll find me exploring new technologies,
-              reading about industry trends, or planning my next workshop. i
-              believe in maintaining a healthy work-life balance and enjoy
-              connecting with fellow developers in the community.
+              when i'm not coding, you'll find me sipping on a cup hot brew of
+              coffee, reading about fancy technologies or watching sam altman
+              talking about AGI. i love reading and enjoy spending time with
+              students to understand their thoughts and their approach in
+              learning.
             </p>
             <p className="text-xl leading-relaxed">
               i'm always excited to discuss new ideas, collaborate on

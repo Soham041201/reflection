@@ -19,23 +19,31 @@ export default function Home() {
     <div className="reflection-container pt-8 font-serif text-lg md:text-xl">
       {/* Hero Section */}
       <section className="mb-[8rem] mt-[6rem]">
-        <h1 className="text-7xl mb-8 leading-tight">soham sattigeri</h1>
-        <div className="text-2xl md:text-3xl mb-8 text-muted-foreground">
+        <h1 className="text-7xl mb-8 leading-tight">
+          hi friend, i'm soham sattigeri
+        </h1>
+        <div className="text-xl md:text-2xl mb-8 text-muted-foreground">
           <p>
-            founding team software engineer at{" "}
-            <span className="text-primary">kily.ai</span>
+            i'm currently a founding team engineer at{" "}
+            <a
+              href="https://kily.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              kily.ai
+            </a>
+            , where i'm building and shipping a bunch of services for the ads
+            ecosystem.
           </p>
         </div>
-        <p className="text-xl max-w-3xl leading-relaxed text-muted-foreground">
-          building and shipping products for crafting next generation ads.
-        </p>
       </section>
 
       <div className="section-divider"></div>
 
       {/* Quick Links */}
       <section className="mb-[8rem]">
-        <h2 className="text-3xl mb-8">explore</h2>
+        <h2 className="text-xl md:text-2xl mb-8">here's a bit more about me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link
             href="/about"
@@ -93,50 +101,74 @@ export default function Home() {
 
       <div className="section-divider"></div>
 
-      {/* Featured Content */}
+      {/* Featured Articles */}
       <section className="mb-[8rem]">
-        <h2 className="text-3xl mb-8">featured</h2>
+        <h2 className="text-3xl mb-8">recent writings</h2>
 
-        <div className="space-y-6">
-          <div className="p-6 border border-border rounded-lg">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
-                current
-              </span>
-              <h3 className="text-xl font-serif">
-                associate software engineer at kodo
+        <div className="space-y-4">
+          <Link
+            href="/writing/life-is-delusional"
+            className="group flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-muted/20 hover:border-primary/30 transition-all duration-300"
+          >
+            <ArrowIcon />
+            <div>
+              <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
+                Life is Delusional
               </h3>
+              <p className="text-muted-foreground text-sm">
+                a contemplation on the necessary delusions we maintain to find
+                purpose
+              </p>
             </div>
-            <p className="text-muted-foreground mb-4">
-              promoted from internship, currently shipping production features
-            </p>
-            <Link
-              href="/work"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80"
-            >
-              <span>view experience</span>
-              <ArrowIcon />
-            </Link>
-          </div>
+          </Link>
 
-          <div className="p-6 border border-border rounded-lg">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
-                teaching
-              </span>
-              <h3 className="text-xl font-serif">full-stack bootcamp</h3>
+          <Link
+            href="/writing/conveniently-absurd"
+            className="group flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-muted/20 hover:border-primary/30 transition-all duration-300"
+          >
+            <ArrowIcon />
+            <div>
+              <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
+                Conveniently Absurd
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                navigating absurdity by creating convenient narratives and
+                meaning structures
+              </p>
             </div>
-            <p className="text-muted-foreground mb-4">
-              2-day intensive workshop: html to advanced javascript bundling
-            </p>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80"
-            >
-              <span>learn more</span>
-              <ArrowIcon />
-            </Link>
-          </div>
+          </Link>
+
+          <Link
+            href="/writing/information-knowledge-and-wisdom"
+            className="group flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-muted/20 hover:border-primary/30 transition-all duration-300"
+          >
+            <ArrowIcon />
+            <div>
+              <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
+                Information, Knowledge, and Wisdom
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                exploring how data transforms into insight and profound
+                understanding
+              </p>
+            </div>
+          </Link>
+
+          <Link
+            href="/writing/the-joy-of-writing-code"
+            className="group flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-muted/20 hover:border-primary/30 transition-all duration-300"
+          >
+            <ArrowIcon />
+            <div>
+              <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
+                The Joy of Writing Code
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                reflecting on the fundamental excitement that drives quality
+                software craftsmanship
+              </p>
+            </div>
+          </Link>
         </div>
       </section>
 
@@ -145,37 +177,31 @@ export default function Home() {
       {/* Connect */}
       <section className="mb-[6rem]">
         <h2 className="text-3xl mb-8">let's connect</h2>
-        <div className="p-8 bg-muted/20 rounded-lg text-center">
-          <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-            interested in collaborating on projects, discussing ideas, or just
-            having a chat about tech and philosophy?
+        <div className="space-y-4">
+          <p className="text-xl text-muted-foreground mb-6">
+            interested in collaborating or just having a chat?
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-wrap gap-6">
             <a
               href="mailto:sattigeri.soham@gmail.com"
-              className="btn-tangerine inline-flex items-center gap-2"
+              className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
             >
-              <span>get in touch</span>
-              <ArrowIcon />
+              email
             </a>
-            <div className="flex gap-4">
-              <a
-                href="https://www.linkedin.com/in/soham-sattigeri-062bb1179/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <span>linkedin</span>
-                <ArrowIcon />
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <span>more ways to connect</span>
-                <ArrowIcon />
-              </Link>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/soham-sattigeri-062bb1179/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
+            >
+              linkedin
+            </a>
+            <Link
+              href="/contact"
+              className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
+            >
+              more ways to connect
+            </Link>
           </div>
         </div>
       </section>
