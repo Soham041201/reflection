@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { Header } from './Header';
+import { ReactNode } from "react";
+import { Header } from "./Header";
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,11 +7,9 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col wavy-background">
       <Header />
-      <main className="flex-grow">
-        {children}
-      </main>
+      <main className="flex-grow">{children}</main>
     </div>
   );
 }

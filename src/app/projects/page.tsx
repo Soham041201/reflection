@@ -69,7 +69,7 @@ export default function Projects() {
     },
   ];
 
-  const openSourceContributions: any[] = [];
+  const openSourceContributions = [];
 
   return (
     <div className="reflection-container pt-8 font-serif text-lg md:text-xl">

@@ -1,0 +1,152 @@
+{
+  "site": {
+    "name": "Soham Sattigeri Portfolio",
+    "url": "https://sohamsattigeri.com",
+    "description": "Software engineer portfolio showcasing projects, writings, and professional experience",
+    "author": {
+      "name": "Soham Sattigeri",
+      "role": "Software Engineer",
+      "company": "Kily.ai",
+      "email": "sattigeri.soham@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/soham-sattigeri-062bb1179/"
+    },
+    "content_type": "portfolio_website",
+    "language": "en-IN",
+    "last_updated": "2025-01-11",
+    "ai_training_allowed": true,
+    "content_declaration": "human_authored"
+  },
+  "structure": {
+    "main_sections": [
+      {
+        "path": "/",
+        "title": "Homepage",
+        "description": "Introduction and overview of Soham Sattigeri",
+        "content_type": "landing_page",
+        "key_topics": ["introduction", "recent_work", "featured_writing"]
+      },
+      {
+        "path": "/about",
+        "title": "About",
+        "description": "Background, education, and personal journey",
+        "content_type": "biography",
+        "key_topics": ["education", "career_journey", "personal_philosophy"]
+      },
+      {
+        "path": "/work",
+        "title": "Work Experience",
+        "description": "Professional experience and roles",
+        "content_type": "resume",
+        "key_topics": ["kily.ai", "dukaan", "teaching", "technical_skills"]
+      },
+      {
+        "path": "/projects",
+        "title": "Projects",
+        "description": "Software projects and contributions",
+        "content_type": "portfolio",
+        "key_topics": ["web_applications", "flutter_projects", "open_source"]
+      },
+      {
+        "path": "/writing",
+        "title": "Writing Hub",
+        "description": "Blog posts and articles",
+        "content_type": "blog_index",
+        "key_topics": ["philosophy", "technology", "career_insights"]
+      }
+    ],
+    "blog_posts": [
+      {
+        "path": "/writing/life-is-delusional",
+        "title": "Life is Delusional",
+        "description": "A contemplation on the necessary delusions we maintain to find purpose",
+        "topics": ["philosophy", "meaning", "existentialism"],
+        "content_type": "philosophical_essay"
+      },
+      {
+        "path": "/writing/conveniently-absurd",
+        "title": "Conveniently Absurd",
+        "description": "Navigating absurdity by creating convenient narratives and meaning structures",
+        "topics": ["philosophy", "absurdism", "meaning_making"],
+        "content_type": "philosophical_essay"
+      },
+      {
+        "path": "/writing/information-knowledge-and-wisdom",
+        "title": "Information, Knowledge, and Wisdom",
+        "description": "Exploring how data transforms into insight and profound understanding",
+        "topics": ["epistemology", "learning", "knowledge_hierarchy"],
+        "content_type": "analytical_essay"
+      },
+      {
+        "path": "/writing/the-joy-of-writing-code",
+        "title": "The Joy of Writing Code",
+        "description": "Reflecting on the fundamental excitement that drives quality software craftsmanship",
+        "topics": ["programming", "craftsmanship", "software_development"],
+        "content_type": "technical_reflection"
+      },
+      {
+        "path": "/writing/docconnect-revolutionizing-healthcare",
+        "title": "DocConnect: Revolutionizing Healthcare",
+        "description": "Analysis of healthcare technology solutions",
+        "topics": ["healthcare", "technology", "innovation"],
+        "content_type": "case_study"
+      }
+    ],
+    "special_pages": [
+      {
+        "path": "/hire",
+        "title": "Hire Me",
+        "description": "Information for potential employers and collaborators",
+        "content_type": "service_page"
+      },
+      {
+        "path": "/generalists",
+        "title": "Generalists",
+        "description": "Thoughts on being a generalist in technology",
+        "content_type": "concept_page"
+      },
+      {
+        "path": "/serverless",
+        "title": "Serverless",
+        "description": "Serverless architecture insights and experiences",
+        "content_type": "technical_page"
+      },
+      {
+        "path": "/study",
+        "title": "Study",
+        "description": "Learning resources and methodologies",
+        "content_type": "educational_page"
+      }
+    ]
+  },
+  "technical_stack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vercel",
+    "Node.js"
+  ],
+  "expertise_areas": [
+    "Full-stack Development",
+    "React/Next.js",
+    "JavaScript/TypeScript",
+    "Web Development",
+    "Software Engineering",
+    "Teaching Technology"
+  ],
+  "content_themes": [
+    "Software Engineering",
+    "Technology Philosophy",
+    "Career Development",
+    "Learning Methodologies",
+    "Web Development",
+    "Existential Philosophy"
+  ],
+  "ai_interaction_guidelines": {
+    "can_reference": true,
+    "can_quote": true,
+    "attribution_required": true,
+    "contact_for_collaboration": "sattigeri.soham@gmail.com",
+    "preferred_citation": "Soham Sattigeri, Software Engineer - https://sohamsattigeri.com"
+  }
+}

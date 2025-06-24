@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sohamsattigeri.com/sitemap.xml
+
+# AI Content Manifest for better AI understanding
+# AI-content-manifest: https://sohamsattigeri.com/ai-content-manifest.json
+
+# Allow crawling of all common file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.pdf$
+
+# No restrictions - all content is public
+# This allows search engines and web scrapers to easily index the portfolio 
