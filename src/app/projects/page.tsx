@@ -41,78 +41,35 @@ const GithubIcon = () => (
 export default function Projects() {
   const projects = [
     {
-      title: "ShopIt",
+      title: "docconnect",
       description:
-        "A shop application designed to integrate with customers, built using Flutter/Dart. Features customer interaction capabilities and mobile-first design for seamless shopping experiences.",
-      category: "mobile",
-      status: "completed",
+        "docconnect is an multi platform application which helps patients to securely share their past medical data to doctors to help them make better decisions.",
+      category: "multi-platform",
+      status: "in progress",
       highlights: [
-        "customer integration and interaction features",
-        "mobile-first design with flutter",
-        "cross-platform compatibility",
-        "intuitive user interface for shopping",
+        "past records management secure with end to end encryption",
+        "AI first doctor assistant to give doctor better context about the patient",
+        "medication reminders, test lambs integration and a lot more",
       ],
-      githubUrl: "https://github.com/Soham041201/ShopIt",
+      demoUrl: "https://www.docconnect.life/#",
     },
     {
-      title: "Web Chat Application",
+      title: "sab sunno",
       description:
-        "A real-time web chat application built with Node.js and WebSockets. Enables instant messaging with live communication features and responsive web interface.",
+        "an AI native realtime voice chat application to seamlessly integrate with your knowledge base and give you real insights in your conversations",
       category: "full-stack",
-      status: "completed",
+      status: "in progress",
       highlights: [
-        "real-time messaging with websockets",
+        "real-time voice chat with websockets",
         "node.js backend architecture",
-        "responsive web interface",
+        "AI first voice chat assistant",
         "instant communication features",
       ],
-      githubUrl: "https://github.com/Soham041201/Web-Chat-App",
-    },
-    {
-      title: "Firebase Integration Project",
-      description:
-        "A project exploring Firebase services and cloud integration. Demonstrates modern backend-as-a-service implementation with real-time data handling.",
-      category: "backend",
-      status: "completed",
-      highlights: [
-        "firebase services integration",
-        "cloud-based data management",
-        "real-time database operations",
-        "scalable backend architecture",
-      ],
-      githubUrl: "https://github.com/Soham041201/FireBase",
-    },
-    {
-      title: "NoteMe - Automated Note Maker",
-      description:
-        "An automated note-making application that streamlines the process of creating and organizing notes. Contributes to improved productivity and note management.",
-      category: "productivity",
-      status: "open source",
-      highlights: [
-        "automated note generation",
-        "organized note management system",
-        "productivity enhancement features",
-        "collaborative development (forked project)",
-      ],
-      githubUrl: "https://github.com/Soham041201/noteme-1",
+      demoUrl: "https://splendid-dasik-09a897.netlify.app/home",
     },
   ];
 
-  const openSourceContributions = [
-    {
-      project: "Snake Game",
-      description:
-        "contributed to classic snake game implementation with improved features",
-      type: "game development",
-      githubUrl: "https://github.com/Soham041201/Snake-Game",
-    },
-    {
-      project: "Studify",
-      description: "participated in educational platform development",
-      type: "education tech",
-      githubUrl: "https://github.com/Soham041201/Studify",
-    },
-  ];
+  const openSourceContributions: any[] = [];
 
   return (
     <div className="reflection-container pt-8 font-serif text-lg md:text-xl">
@@ -120,9 +77,11 @@ export default function Projects() {
         {/* Header */}
         <section className="mb-16 mt-8">
           <h1 className="text-6xl mb-8">projects</h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
-            building meaningful applications that solve real problems and
-            showcase modern web development practices.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            while most of the projects i have worked on are not public, here are
+            the few projects which are ongoing and open source. these projects
+            have been solely made for curiosity and scratching the itch of
+            building something.
           </p>
         </section>
 
@@ -160,20 +119,16 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-2 mt-4 md:mt-0">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-200"
-                    >
-                      <GithubIcon />
-                      <span className="text-sm">code</span>
-                    </a>
                     {project.status !== "open source" && (
-                      <button className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-200">
+                      <a
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all duration-200"
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLinkIcon />
                         <span className="text-sm">demo</span>
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -195,6 +150,19 @@ export default function Projects() {
               </div>
             ))}
           </div>
+
+          <p className="text-lg text-muted-foreground mt-8">
+            you can view all my github contributions{" "}
+            <a
+              href="https://github.com/Soham041201"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors font-serif"
+            >
+              here
+            </a>
+            .
+          </p>
         </section>
 
         <div className="section-divider"></div>
@@ -203,75 +171,45 @@ export default function Projects() {
         <section className="mb-16">
           <h2 className="text-3xl mb-8">open source contributions</h2>
 
-          <div className="space-y-4">
-            {openSourceContributions.map((contribution, index) => (
-              <div key={index} className="p-6 border border-border rounded-lg">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl">{contribution.project}</h3>
-                      <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-full">
-                        {contribution.type}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground">
-                      {contribution.description}
-                    </p>
-                  </div>
-
-                  <a
-                    href={contribution.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-muted/20 transition-colors mt-4 md:mt-0"
-                  >
-                    <GithubIcon />
-                    <span className="text-sm">view</span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 p-6 bg-muted/20 rounded-lg">
-            <h3 className="text-xl mb-3">contributing to the community</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              i believe in giving back to the open source community that has
-              helped me learn and grow. i regularly contribute to projects,
-              whether through code contributions, documentation improvements, or
-              helping with issue resolution. always looking for new projects to
-              contribute to and collaborate with fellow developers.
+          <div className="p-8 bg-muted/20 rounded-lg text-center">
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              come back again here later – this section is being updated with my
+              latest open source contributions and community involvement.
             </p>
           </div>
         </section>
 
         <div className="section-divider"></div>
 
-        {/* CTA */}
+        {/* Connect */}
         <section className="mb-16">
-          <div className="p-8 bg-muted/20 rounded-lg text-center">
-            <h2 className="text-3xl mb-4">have a project in mind?</h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-              i'm always interested in collaborating on exciting projects or
-              contributing to meaningful open source initiatives. let's build
-              something amazing together!
+          <h2 className="text-3xl mb-8">stay connected</h2>
+          <div className="space-y-4">
+            <p className="text-xl text-muted-foreground mb-6">
+              follow my work and connect across platforms.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-wrap gap-6">
               <a
                 href="mailto:sattigeri.soham@gmail.com"
-                className="btn-tangerine inline-flex items-center gap-2"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                <span>start a conversation</span>
-                <ArrowIcon />
+                email
               </a>
               <a
                 href="https://github.com/Soham041201"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                <GithubIcon />
-                <span>view all projects</span>
+                github
+              </a>
+              <a
+                href="https://www.linkedin.com/in/soham-sattigeri-062bb1179/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
+              >
+                linkedin
               </a>
             </div>
           </div>

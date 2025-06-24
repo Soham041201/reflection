@@ -227,26 +227,30 @@ export default function Work() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">full-stack bootcamp</h3>
+              <h3 className="text-xl mb-3 text-primary">
+                what the heck is a website?
+              </h3>
               <p className="text-muted-foreground mb-4">
-                conducted 2-day intensive bootcamp covering html basics to
-                advanced javascript bundling techniques.
+                conducted a 2-day intensive bootcamp covering html basics to
+                advanced javascript bundling techniques for freshmen year
+                students.
               </p>
               <div className="text-sm text-muted-foreground">
-                <p>• modern web development workflows</p>
-                <p>• javascript fundamentals to advanced concepts</p>
-                <p>• hands-on project-based learning</p>
+                <p>• html basics</p>
+                <p>• javascript fundamentals</p>
+                <p>• bundling techniques</p>
               </div>
             </div>
 
             <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">developer mentoring</h3>
-              <p className="text-muted-foreground mb-4">
-                helping aspiring developers transition into tech through
-                guidance and knowledge sharing.
+              <h3 className="text-xl mb-3 text-primary">flutter bootcamp</h3>
+              <p className="text-md text-muted-foreground mb-4">
+                3 day intensive bootcamp covering flutter basics to advanced to
+                introduce sophmomore year students to the realm of mobile
+                development and flutter.
               </p>
               <div className="text-sm text-muted-foreground">
-                <p>• career guidance and portfolio reviews</p>
+                <p>• flutter basics</p>
                 <p>• technical interview preparation</p>
                 <p>• open source contribution guidance</p>
               </div>

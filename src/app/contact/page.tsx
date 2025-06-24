@@ -120,7 +120,7 @@ export default function Contact() {
         {/* Header */}
         <section className="mb-16 mt-8">
           <h1 className="text-6xl mb-8">let's connect</h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             open to discussing projects, collaborations, or simply chatting
             about technology and development.
           </p>
@@ -178,52 +178,6 @@ export default function Contact() {
 
         <div className="section-divider"></div>
 
-        {/* What I'm Looking For */}
-        <section className="mb-16">
-          <h2 className="text-3xl mb-8">interested in</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">
-                project collaborations
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                working on meaningful web applications, startups, or open source
-                projects
-              </p>
-            </div>
-
-            <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">
-                teaching & mentoring
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                helping developers learn and grow through workshops and guidance
-              </p>
-            </div>
-
-            <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">tech discussions</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                conversations about web development, philosophy, and
-                technology's impact
-              </p>
-            </div>
-
-            <div className="p-6 border border-border rounded-lg">
-              <h3 className="text-xl mb-3 text-primary">
-                career opportunities
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                full-time roles, freelance projects, or consulting in software
-                development
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider"></div>
-
         {/* Location & Availability */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -251,10 +205,10 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-primary">⏰</span>
+                  <span className="text-primary">☕</span>
                   <div>
                     <p className="font-medium">
-                      open to <s>freelance projects</s> coffee
+                      open for coffee
                     </p>
                     <p className="text-muted-foreground text-sm">
                       feel free to reach out anytime

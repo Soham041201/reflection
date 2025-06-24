@@ -217,7 +217,7 @@ export default function Writing() {
   const researchPapers = [
     {
       title:
-        "Thaat Classification Using Recurrent Neural Networks with Long Short-Term Memory and Support Vector Machine",
+        "thaat classification using recurrent neural networks with long short-term memory and support vector machine",
       authors: [
         "Swati Shilaskar",
         "Shripad Bhatlawande",
@@ -225,12 +225,12 @@ export default function Writing() {
         "Soham Sattigeri",
       ],
       journal:
-        "International Journal on Recent and Innovation Trends in Computing and Communication",
+        "international journal on recent and innovation trends in computing and communication",
       volume: "Vol. 11 No. 10",
       year: "2023",
       doi: "https://doi.org/10.17762/ijritcc.v11i10.8680",
       abstract:
-        "This research paper introduces a groundbreaking method for music classification, emphasizing thaats rather than the conventional raga-centric approach. A comprehensive range of audio features, including amplitude envelope, RMSE, STFT, spectral centroid, MFCC, spectral bandwidth, and zero-crossing rate, is meticulously used to capture thaats' distinct characteristics in Indian classical music. The study predicts emotional responses linked with the identified thaats, achieving 85% accuracy with RNN-LSTM and 78% with SVM.",
+        "this research paper introduces a groundbreaking method for music classification, emphasizing thaats rather than the conventional raga-centric approach. A comprehensive range of audio features, including amplitude envelope, RMSE, STFT, spectral centroid, MFCC, spectral bandwidth, and zero-crossing rate, is meticulously used to capture thaats' distinct characteristics in Indian classical music. The study predicts emotional responses linked with the identified thaats, achieving 85% accuracy with RNN-LSTM and 78% with SVM.",
       keywords: [
         "music classification",
         "MFCC",
@@ -244,11 +244,11 @@ export default function Writing() {
       achievements: [
         "85% accuracy with RNN-LSTM model",
         "78% accuracy with SVM model",
-        "Innovative thaat-based approach to Indian classical music",
+        "innovative thaat-based approach to indian classical music",
       ],
     },
     {
-      title: "Real-time Audio Communication using WebRTC and MERN Stack",
+      title: "real-time audio communication using WebRTC and MERN stack",
       authors: ["Soham Sattigeri", "Shripad Bhatlawande"],
       journal:
         "Proceedings of International Conference on Paradigms of Communication, Computing and Data Analytics (PCCDA 2023), Springer",
@@ -256,7 +256,7 @@ export default function Writing() {
       year: "2023",
       doi: "https://doi.org/10.1007/978-981-99-4626-6_28",
       abstract:
-        "Real-time apps must be implemented by developers because of the rise in web-based communication. The project that examines the use of the WebRTC protocol is presented in the proposed article. The project is judged on how well it performs and scales, as well as how well it can accommodate various user situations and use cases. The program is a good example of a scalable application because it has an 85% success rate. Although nearly all apps now use VoIP (Voice Over Internet Protocol) to transport data online, this paper proposes a more straightforward method using WebRTC. The evaluation's findings show that the implementation can support more than 70 concurrent users while also offering low latency, high-quality audio transmission.",
+        "real-time apps must be implemented by developers because of the rise in web-based communication. The project that examines the use of the WebRTC protocol is presented in the proposed article. The project is judged on how well it performs and scales, as well as how well it can accommodate various user situations and use cases. The program is a good example of a scalable application because it has an 85% success rate. Although nearly all apps now use VoIP (Voice Over Internet Protocol) to transport data online, this paper proposes a more straightforward method using WebRTC. The evaluation's findings show that the implementation can support more than 70 concurrent users while also offering low latency, high-quality audio transmission.",
       keywords: [
         "WebRTC",
         "MERN Stack",
@@ -279,52 +279,52 @@ export default function Writing() {
 
   const posts = [
     {
-      title: "The Joy of Writing Code",
+      title: "the joy of writing code",
       slug: "the-joy-of-writing-code",
       type: "blog",
       mediumUrl:
         "https://medium.com/@sattigeri.soham/the-joy-of-writing-code-662a8312f2cd",
       description:
-        "A reflection on the fundamental excitement that drives quality software craftsmanship. Exploring how earning money through software is the outcome, not the goal, and what it means to truly love the craft of coding.",
+        "a reflection on the fundamental excitement that drives quality software craftsmanship. Exploring how earning money through software is the outcome, not the goal, and what it means to truly love the craft of coding.",
       category: "philosophy",
       date: "October 20, 2024",
       readTime: "4 min read",
       featured: true,
     },
     {
-      title: "Information, Knowledge, and Wisdom",
+      title: "information, knowledge, and wisdom",
       slug: "information-knowledge-and-wisdom",
       type: "blog",
       mediumUrl:
         "https://medium.com/@sattigeri.soham/information-knowledge-and-wisdom-4d9b196c66c2",
       description:
-        "An exploration of the hierarchical relationship between information, knowledge, and wisdom. Understanding how data transforms into insight and eventually into profound understanding that guides our decisions.",
+        "an exploration of the hierarchical relationship between information, knowledge, and wisdom. Understanding how data transforms into insight and eventually into profound understanding that guides our decisions.",
       category: "philosophy",
       date: "October 13, 2024",
       readTime: "5 min read",
       featured: true,
     },
     {
-      title: "Conveniently Absurd",
+      title: "conveniently absurd",
       slug: "conveniently-absurd",
       type: "blog",
       mediumUrl:
         "https://medium.com/@sattigeri.soham/conveniently-absurd-25b4d63f66dd",
       description:
-        "A philosophical examination of how we navigate the absurdity of existence by creating convenient narratives and meaning structures that help us function in an inherently meaningless world.",
+        "a philosophical examination of how we navigate the absurdity of existence by creating convenient narratives and meaning structures that help us function in an inherently meaningless world.",
       category: "philosophy",
       date: "October 6, 2024",
       readTime: "6 min read",
       featured: false,
     },
     {
-      title: "Life is Delusional",
+      title: "life is delusional",
       slug: "life-is-delusional",
       type: "blog",
       mediumUrl:
         "https://medium.com/@sattigeri.soham/life-is-delusional-f52f0939d953",
       description:
-        "A contemplation on the necessary delusions we maintain to find purpose and direction. Examining how our constructed realities and beliefs shape our experience of existence.",
+        "a contemplation on the necessary delusions we maintain to find purpose and direction. Examining how our constructed realities and beliefs shape our experience of existence.",
       category: "philosophy",
       date: "September 29, 2024",
       readTime: "4 min read",
@@ -358,10 +358,10 @@ export default function Writing() {
         {/* Header */}
         <section className="mb-16 mt-8">
           <h1 className="text-6xl mb-8">writing</h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
-            thoughts on philosophy, technology, research, and career growth.
-            exploring the intersection of academic study, practical development,
-            and the human experience of building software.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            thoughts on philosophy, technology, research, and career growth. i
+            write about my experiences and learnings in the field of software
+            development, and my journey as a software engineer.
           </p>
         </section>
 
@@ -375,9 +375,9 @@ export default function Writing() {
                 <span className="text-primary font-bold">M</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold">Medium Publication</h3>
+                <h3 className="text-xl font-semibold">medium publication</h3>
                 <p className="text-muted-foreground">
-                  Read my latest philosophical musings and technical insights
+                  read my latest philosophical musings and technical insights
                 </p>
               </div>
             </div>
@@ -387,7 +387,7 @@ export default function Writing() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
             >
-              <span>Follow me on Medium</span>
+              <span>follow me on medium</span>
               <ArrowIcon />
             </Link>
           </div>
@@ -519,7 +519,7 @@ export default function Writing() {
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-md text-muted-foreground leading-relaxed">
                       {post.description}
                     </p>
                   </article>
@@ -608,40 +608,44 @@ export default function Writing() {
           </div>
         </section>
 
-        {/* Newsletter/Subscribe */}
+        {/* Stay Connected */}
         <section className="mb-16">
-          <div className="p-8 bg-muted/20 rounded-lg text-center">
-            <h2 className="text-3xl mb-4">stay connected</h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <h2 className="text-3xl mb-8">stay connected</h2>
+          <div className="space-y-4">
+            <p className="text-xl text-muted-foreground mb-6">
               follow my writing journey on medium and connect across platforms.
             </p>
-
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              <Link
+            <div className="flex flex-wrap gap-6">
+              <a
                 href="https://medium.com/@sattigeri.soham"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tangerine"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                follow on medium
-              </Link>
-              <Link
+                medium
+              </a>
+              <a
                 href="https://x.com/SattigeriSoham"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border border-border rounded-lg hover:bg-muted/20 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                follow on x
-              </Link>
-              <Link
+                x
+              </a>
+              <a
                 href="https://github.com/Soham041201"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
               >
-                <span>github</span>
-                <ArrowIcon />
-              </Link>
+                github
+              </a>
+              <a
+                href="mailto:sattigeri.soham@gmail.com"
+                className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
+              >
+                email
+              </a>
             </div>
           </div>
         </section>

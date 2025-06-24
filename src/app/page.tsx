@@ -113,7 +113,7 @@ export default function Home() {
             <ArrowIcon />
             <div>
               <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
-                Life is Delusional
+                life is delusional
               </h3>
               <p className="text-muted-foreground text-sm">
                 a contemplation on the necessary delusions we maintain to find
@@ -129,7 +129,7 @@ export default function Home() {
             <ArrowIcon />
             <div>
               <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
-                Conveniently Absurd
+                conveniently absurd
               </h3>
               <p className="text-muted-foreground text-sm">
                 navigating absurdity by creating convenient narratives and
@@ -145,7 +145,7 @@ export default function Home() {
             <ArrowIcon />
             <div>
               <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
-                Information, Knowledge, and Wisdom
+                information, knowledge, and wisdom
               </h3>
               <p className="text-muted-foreground text-sm">
                 exploring how data transforms into insight and profound
@@ -161,7 +161,7 @@ export default function Home() {
             <ArrowIcon />
             <div>
               <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
-                The Joy of Writing Code
+                the joy of writing code
               </h3>
               <p className="text-muted-foreground text-sm">
                 reflecting on the fundamental excitement that drives quality
