@@ -147,6 +147,30 @@ export default function Projects() {
                     ))}
                   </ul>
                 </div>
+
+                {project.title === "docconnect" && (
+                  <div className="border-t border-border/50 pt-6">
+                    <div className="flex items-start gap-3 p-4rounded-lg">
+                      <div className="flex-1">
+                        <h5 className="text-base font-medium mb-2 text-foreground">
+                          why docconnect?
+                        </h5>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                          healthcare data fragmentation costs lives and billions
+                          of dollars. discover the deeper story behind this
+                          solution.
+                        </p>
+                        <a
+                          href="/writing/docconnect-revolutionizing-healthcare"
+                          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                        >
+                          <span>read the full story here</span>
+                          <ArrowIcon />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

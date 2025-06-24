@@ -207,9 +207,7 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <span className="text-primary">☕</span>
                   <div>
-                    <p className="font-medium">
-                      open for coffee
-                    </p>
+                    <p className="font-medium">open for coffee</p>
                     <p className="text-muted-foreground text-sm">
                       feel free to reach out anytime
                     </p>

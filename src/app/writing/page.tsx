@@ -279,6 +279,18 @@ export default function Writing() {
 
   const posts = [
     {
+      title: "docconnect: revolutionizing healthcare through connected care",
+      slug: "docconnect-revolutionizing-healthcare",
+      type: "blog",
+      mediumUrl: "",
+      description:
+        "exploring how docconnect transforms fragmented healthcare into a patient-centric ecosystem where medical data flows seamlessly between providers, enabling better care coordination and patient empowerment.",
+      category: "tech",
+      date: "January 14, 2025",
+      readTime: "8 min read",
+      featured: true,
+    },
+    {
       title: "the joy of writing code",
       slug: "the-joy-of-writing-code",
       type: "blog",
