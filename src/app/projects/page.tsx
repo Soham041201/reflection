@@ -55,6 +55,20 @@ export default function Projects() {
       demoUrl: "https://github.com/Soham041201/webdoc",
     },
     {
+      title: "multi-music",
+      description:
+        "a native macos multi-track audio looper and dj-style pad player built with swiftui. it allows users to load folders of audio files and play multiple tracks simultaneously with real-time adjustments.",
+      category: "macos-app",
+      status: "completed",
+      highlights: [
+        "multi-track playback with seamless looping and stop/resume functionality",
+        "real-time audio processing for pitch and tempo adjustments using avaudioengine",
+        "intelligent audio analysis featuring automatic bpm estimation and waveform generation",
+        "interactive drag-and-drop interface for managing tracks and a configurable player deck",
+      ],
+      demoUrl: "https://github.com/Soham041201/Multi-music",
+    },
+    {
       title: "docconnect",
       description:
         "docconnect is an multi platform application which helps patients to securely share their past medical data to doctors to help them make better decisions.",
