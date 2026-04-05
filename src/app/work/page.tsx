@@ -55,12 +55,18 @@ export default function Work() {
       period: "2025 - present",
       link: "https://kily.ai",
       description:
-        "as a part of the founding time, i'm currently spending my time building the infra for the ads ecosystem. my major work revolves around building data pipelines and services to ingest and process data from various sources.",
+        "designing and building the infrastructure that keeps kily.ai's ads ecosystem running: from ingesting marketplace data to orchestrating browser agents, backend services, and production deployments.",
+      impact: [
+        "Turned fragmented reports and browser workflows into dependable, automated operations across Amazon, Blinkit, Swiggy, and Zepto.",
+        "Composed data pipelines, services, and browser agents, then productionized everything with Docker, Terraform, ECS/Lambda, observability, and CI/CD so the org could backfill, ship campaigns, and stay online without firefighting.",
+        "Expanded the product surface with marketplace-specific integration points, auth flows, and UX improvements that made deployments easier for the business.",
+      ],
       achievements: [
-        "build the entire e2e data pipeline from `git init` to ingest data from amazon ads, amazon sp, blinkit, swiggy instamart, etc currently which handles a traffic of around 100k records per day.",
-        "rewritten the entire chat interface from http stream API to websocket API to handle real-time communication with the users.",
-        "worked on the categorization system of search keywords to categorise them into classes giving users insight on their ads performance.",
-        "revamped the entire front-end interface to support API caching, middleware integration, and other features to improve the user experience.",
+        "built the end-to-end pipeline that ingests data from Amazon Ads, Amazon SP, blinkit, swiggy instamart, and more, processing more than a million records daily and indexing it for reporting across marketplaces",
+        "reverse engineered marketplace ad dashboards to bulk update bids and budgets at scale to improve campaign performance for our clients",
+        "authored backend APIs and browser agents with upstream services for campaign automation, credential rotation and resilient session.",
+        "handled infrastructure code (Terraform + ECS/Lambda) for deployments, observability, and GitHub Actions workflows to keep releases predictable.",
+        "refined frontend and integration points to surface caching, middleware hooks, and marketplace-specific auth flows.",
       ],
       current: true,
     },
