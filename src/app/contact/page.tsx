@@ -99,8 +99,8 @@ export default function Contact() {
     {
       platform: "Twitter / X",
       description: "thoughts and quick updates",
-      contact: "@sohamdocs_",
-      href: "https://x.com/sohamdocs_",
+      contact: "@sohamdocs",
+      href: "https://x.com/sohamdocs",
       icon: <TwitterIcon />,
       primary: false,
     },

@@ -20,7 +20,7 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="https://x.com/sohamdocs_" target="_blank" rel="noopener noreferrer" className="link-hover font-serif">
+              <Link href="https://x.com/sohamdocs" target="_blank" rel="noopener noreferrer" className="link-hover font-serif">
                 x
               </Link>
             </li>
