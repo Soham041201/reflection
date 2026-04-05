@@ -82,6 +82,8 @@ export const metadata: Metadata = {
     description:
       "Associate Software Engineer at Kodo. Full-stack developer passionate about creating impactful web experiences and teaching technology.",
     images: ["/opengraph.png"],
+    creator: "@sohamdocs_",
+    site: "@sohamdocs_",
   },
 };
 
@@ -109,7 +111,8 @@ export default function RootLayout({
               url: "https://sohamsattigeri.com",
               sameAs: [
                 "https://www.linkedin.com/in/soham-sattigeri-062bb1179/",
-                "https://github.com/yourusername", // Add your actual GitHub
+                "https://github.com/Soham041201",
+                "https://x.com/sohamdocs_",
               ],
               knowsAbout: [
                 "Web Development",

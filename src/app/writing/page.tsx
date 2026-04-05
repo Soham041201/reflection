@@ -637,7 +637,7 @@ export default function Writing() {
                 medium
               </a>
               <a
-                href="https://x.com/SattigeriSoham"
+                href="https://x.com/sohamdocs_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors font-serif text-xl"
