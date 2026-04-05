@@ -81,7 +81,7 @@ export default function Work() {
       company: "dukaan",
       role: "software engineer intern",
       period: "2023",
-      link: "https://dukaan.com",
+      link: "https://mydukaan.io",
       description:
         "worked on 'luna', a dukaan help chatbot for resolving customer support tickets",
       achievements: [

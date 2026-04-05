@@ -41,6 +41,20 @@ const GithubIcon = () => (
 export default function Projects() {
   const projects = [
     {
+      title: "webdoc",
+      description:
+        "a claude-code–style cli agent that automates api documentation by observing real-time ui interactions. it correlates user actions with network calls using llm + vision to generate structured, human-readable documentation.",
+      category: "developer-tool",
+      status: "in progress",
+      highlights: [
+        "ui-to-api correlation using gemini 1.5 flash to map browser interactions to api behaviors",
+        "human-in-the-loop safety requiring explicit user approval for sensitive actions",
+        "built with bun and typescript with a terminal ui powered by react ink and playwright",
+        "multiple execution modes including 'observe only' and 'document only' workflows",
+      ],
+      demoUrl: "https://github.com/Soham041201/webdoc",
+    },
+    {
       title: "docconnect",
       description:
         "docconnect is an multi platform application which helps patients to securely share their past medical data to doctors to help them make better decisions.",
