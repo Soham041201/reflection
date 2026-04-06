@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import { Layout } from "@/components/layout/Layout";
 import ClientBody from "./ClientBody";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Soham Sattigeri - Software Engineer",
@@ -162,6 +163,7 @@ export default function RootLayout({
       <ClientBody>
         <Layout>{children}</Layout>
       </ClientBody>
+      <Analytics />
     </html>
   );
 }
