@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { useIntro } from "@/app/_intro/IntroProvider";
+
 const ArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -12,109 +17,192 @@ const ArrowIcon = () => (
   </svg>
 );
 
-export default function Work() {
-  // Add custom CSS animations
-  const animationStyles = `
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes scaleIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  `;
+type Job = {
+  slug: string;
+  company: string;
+  role: string;
+  period: string;
+  link: string;
+  description: string;
+  achievements: string[];
+  current: boolean;
+};
 
-  // Insert styles
-  if (typeof document !== "undefined") {
-    const styleSheet = document.createElement("style");
-    styleSheet.type = "text/css";
-    styleSheet.innerText = animationStyles;
-    if (!document.head.querySelector("style[data-work-animations]")) {
-      styleSheet.setAttribute("data-work-animations", "true");
-      document.head.appendChild(styleSheet);
-    }
+const workExperience: Job[] = [
+  {
+    slug: "kily",
+    company: "kily.ai",
+    role: "founding team engineer",
+    period: "2025 - present",
+    link: "https://kily.ai",
+    description:
+      "designing and building the infrastructure that keeps kily.ai's ads ecosystem running: from ingesting marketplace data to orchestrating browser agents, backend services, and production deployments.",
+    achievements: [
+      "built the end-to-end pipeline that ingests data from Amazon Ads, Amazon SP, blinkit, swiggy instamart, and more, processing more than a million records daily and indexing it for reporting across marketplaces",
+      "reverse engineered marketplace ad dashboards to bulk update bids and budgets at scale to improve campaign performance for our clients",
+      "authored backend APIs and browser agents with upstream services for campaign automation, credential rotation and resilient session.",
+      "handled infrastructure code (Terraform + ECS/Lambda) for deployments, observability, and GitHub Actions workflows to keep releases predictable.",
+      "refined frontend and integration points to surface caching, middleware hooks, and marketplace-specific auth flows.",
+    ],
+    current: true,
+  },
+  {
+    slug: "kodo",
+    company: "kodo",
+    role: "associate software engineer",
+    period: "2023 - 2025",
+    link: "https://kodo.com",
+    description:
+      "internship turned fulltime, kodo was my first gig as an engineer where i build (or atleast tried to) the next generation form platform",
+    achievements: [
+      "Engineered custom components in Formio to support the unique requirements of the P2P process, ensuring efficient handling of form data and integration with existing systems.",
+      "Designed and optimized microservices communication using RabbitMQ, ensuring reliable, asynchronous message processing between procurement services for improved scalability and fault tolerance.",
+    ],
+    current: false,
+  },
+  {
+    slug: "dukaan",
+    company: "dukaan",
+    role: "software engineer intern",
+    period: "2023",
+    link: "https://mydukaan.io",
+    description:
+      "worked on 'luna', a dukaan help chatbot for resolving customer support tickets",
+    achievements: [
+      "Built a Python back-end service using FastAPI, integrating WebSockets to handle 1,000+ daily conversations for over 5,000 sellers, ensuring real-time chatbot interactions.",
+      "Implemented a Retrieval-Augmented Generation (RAG) pipeline with OpenAI and K-Nearest Neighbors (KNN), enhancing chatbot responses with contextual understanding.",
+      "Developed a PostgreSQL-based indexer to structure vendor data, leveraging Pinecone for semantic vector embedding to optimize retrieval and fine-tuning.",
+    ],
+    current: false,
+  },
+  {
+    slug: "leazkart",
+    company: "leazkart",
+    role: "co-founder/cto",
+    period: "2023 - 2024",
+    link: "https://leazkart.com",
+    description: "an attempt to build an airbnb but for vehicles",
+    achievements: [
+      "Led the end-to-end development of Leazkart's mobile application, mentoring a team while architecting complex features, and implemented a real-time vehicle availability system using WebSockets and Express.js.",
+      "Demonstrated technical versatility by driving backend development and orchestrating a cost-effective DevOps infrastructure on Google Cloud Engine, including CI/CD pipelines and custom subnet architecture.",
+      "Spearheaded the selection of an optimized technology stack, aligning it with business objectives and market demands, and collaborated closely with stakeholders to refine project requirements while recruiting and nurturing specialized talent.",
+      "Assumed co-founder responsibilities, balancing technical leadership with strategic business management, conducting thorough market analyses, and maintaining strong investor relations through regular updates on product development and strategic initiatives.",
+    ],
+    current: false,
+  },
+];
+
+const animationStyles = `
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-  const workExperience = [
-    {
-      company: "kily.ai",
-      role: "founding team engineer",
-      period: "2025 - present",
-      link: "https://kily.ai",
-      description:
-        "designing and building the infrastructure that keeps kily.ai's ads ecosystem running: from ingesting marketplace data to orchestrating browser agents, backend services, and production deployments.",
-      impact: [
-        "Turned fragmented reports and browser workflows into dependable, automated operations across Amazon, Blinkit, Swiggy, and Zepto.",
-        "Composed data pipelines, services, and browser agents, then productionized everything with Docker, Terraform, ECS/Lambda, observability, and CI/CD so the org could backfill, ship campaigns, and stay online without firefighting.",
-        "Expanded the product surface with marketplace-specific integration points, auth flows, and UX improvements that made deployments easier for the business.",
-      ],
-      achievements: [
-        "built the end-to-end pipeline that ingests data from Amazon Ads, Amazon SP, blinkit, swiggy instamart, and more, processing more than a million records daily and indexing it for reporting across marketplaces",
-        "reverse engineered marketplace ad dashboards to bulk update bids and budgets at scale to improve campaign performance for our clients",
-        "authored backend APIs and browser agents with upstream services for campaign automation, credential rotation and resilient session.",
-        "handled infrastructure code (Terraform + ECS/Lambda) for deployments, observability, and GitHub Actions workflows to keep releases predictable.",
-        "refined frontend and integration points to surface caching, middleware hooks, and marketplace-specific auth flows.",
-      ],
-      current: true,
-    },
-    {
-      company: "kodo",
-      role: "associate software engineer",
-      period: "2023 - 2025",
-      link: "https://kodo.com",
-      description:
-        "internship turned fulltime, kodo was my first gig as an engineer where i build (or atleast tried to) the next generation form platform",
-      achievements: [
-        "Engineered custom components in Formio to support the unique requirements of the P2P process, ensuring efficient handling of form data and integration with existing systems.",
-        "Designed and optimized microservices communication using RabbitMQ, ensuring reliable, asynchronous message processing between procurement services for improved scalability and fault tolerance.",
-      ],
-      current: false,
-    },
-    {
-      company: "dukaan",
-      role: "software engineer intern",
-      period: "2023",
-      link: "https://mydukaan.io",
-      description:
-        "worked on 'luna', a dukaan help chatbot for resolving customer support tickets",
-      achievements: [
-        "Built a Python back-end service using FastAPI, integrating WebSockets to handle 1,000+ daily conversations for over 5,000 sellers, ensuring real-time chatbot interactions.",
-        "Implemented a Retrieval-Augmented Generation (RAG) pipeline with OpenAI and K-Nearest Neighbors (KNN), enhancing chatbot responses with contextual understanding.",
-        "Developed a PostgreSQL-based indexer to structure vendor data, leveraging Pinecone for semantic vector embedding to optimize retrieval and fine-tuning.",
-      ],
-      current: false,
-    },
-    {
-      company: "leazkart",
-      role: "co-founder/cto",
-      period: "2023 - 2024",
-      link: "https://leazkart.com",
-      description: "an attempt to build an airbnb but for vehicles",
-      achievements: [
-        "Led the end-to-end development of Leazkart's mobile application, mentoring a team while architecting complex features, and implemented a real-time vehicle availability system using WebSockets and Express.js.",
-        "Demonstrated technical versatility by driving backend development and orchestrating a cost-effective DevOps infrastructure on Google Cloud Engine, including CI/CD pipelines and custom subnet architecture.",
-        "Spearheaded the selection of an optimized technology stack, aligning it with business objectives and market demands, and collaborated closely with stakeholders to refine project requirements while recruiting and nurturing specialized talent.",
-        "Assumed co-founder responsibilities, balancing technical leadership with strategic business management, conducting thorough market analyses, and maintaining strong investor relations through regular updates on product development and strategic initiatives.",
-      ],
-      current: false,
-    },
-  ];
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+`;
+
+function JobCard({ job, index }: { job: Job; index: number }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const { registerSection, highlightedSection } = useIntro();
+  const isHighlighted = highlightedSection === job.slug;
+
+  useEffect(() => {
+    registerSection(job.slug, ref.current);
+    return () => registerSection(job.slug, null);
+  }, [job.slug, registerSection]);
 
   return (
+    <div
+      ref={ref}
+      id={job.slug}
+      data-section-id={job.slug}
+      className="group relative flex items-start gap-8 scroll-mt-24 transition-all duration-500 hover:transform hover:translate-y-[-2px]"
+      style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both` }}
+    >
+      {/* Timeline dot */}
+      <div className="relative flex-shrink-0 flex items-center justify-center w-12">
+        <div
+          className={`w-3 h-3 rounded-full border-2 transition-all duration-300 group-hover:scale-125 ${
+            job.current
+              ? "bg-primary border-primary"
+              : "bg-background border-border group-hover:bg-primary group-hover:border-primary"
+          }`}
+        ></div>
+        {job.current && (
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-primary/20 animate-pulse"></div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div
+        className={`flex-1 min-w-0 p-6 rounded-lg border transition-all duration-500 ${
+          isHighlighted
+            ? "border-primary bg-primary/[0.06] shadow-xl shadow-primary/20 ring-2 ring-primary/40"
+            : "border-transparent group-hover:bg-muted/20 group-hover:border-primary/20"
+        }`}
+      >
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <a
+                href={job.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl font-serif text-foreground hover:text-primary transition-colors duration-300 group-hover:underline"
+              >
+                {job.company}
+              </a>
+              {job.current && (
+                <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full animate-pulse">
+                  current
+                </span>
+              )}
+            </div>
+            <p className="text-xl text-primary mb-2 group-hover:text-primary/80 transition-colors">
+              {job.role}
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              {job.description}
+            </p>
+          </div>
+          <div className="mt-4 md:mt-0 md:text-right flex-shrink-0">
+            <span className="text-sm text-muted-foreground font-mono bg-muted/30 px-3 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+              {job.period}
+            </span>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <h4 className="text-lg mb-4 font-serif text-primary opacity-90">
+            key contributions
+          </h4>
+          <div className="space-y-4">
+            {job.achievements.map((achievement, i) => (
+              <p
+                key={i}
+                className="text-muted-foreground leading-relaxed text-base border-l-2 border-muted/30 pl-4 group-hover:border-primary/30 transition-colors duration-300"
+                style={{
+                  animation: `scaleIn 0.4s ease-out ${
+                    index * 0.2 + i * 0.1 + 0.3
+                  }s both`,
+                }}
+              >
+                {achievement}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Work() {
+  return (
     <div className="reflection-container pt-8 font-serif text-lg md:text-xl">
+      <style>{animationStyles}</style>
       <div className="max-w-4xl">
         {/* Header */}
         <section className="mb-16 mt-8">
@@ -125,7 +213,6 @@ export default function Work() {
             in building tools for the long term.
           </p>
           <br />
-
           <p className="text-xl text-muted-foreground leading-relaxed">
             here are the few spaceships i have been a part of till date
           </p>
@@ -143,83 +230,7 @@ export default function Work() {
 
             <div className="space-y-12">
               {workExperience.map((job, index) => (
-                <div
-                  key={index}
-                  className="group relative flex items-start gap-8 transition-all duration-500 hover:transform hover:translate-y-[-2px]"
-                  style={{
-                    animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`,
-                  }}
-                >
-                  {/* Timeline dot */}
-                  <div className="relative flex-shrink-0 flex items-center justify-center w-12">
-                    <div
-                      className={`w-3 h-3 rounded-full border-2 transition-all duration-300 group-hover:scale-125 ${
-                        job.current
-                          ? "bg-primary border-primary"
-                          : "bg-background border-border group-hover:bg-primary group-hover:border-primary"
-                      }`}
-                    ></div>
-                    {job.current && (
-                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-primary/20 animate-pulse"></div>
-                    )}
-                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-7 h-7 rounded-full bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0 p-6 rounded-lg transition-all duration-300 group-hover:bg-muted/20 border border-transparent group-hover:border-primary/20">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <a
-                            href={job.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-2xl font-serif text-foreground hover:text-primary transition-colors duration-300 group-hover:underline"
-                          >
-                            {job.company}
-                          </a>
-                          {job.current && (
-                            <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full animate-pulse">
-                              current
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xl text-primary mb-2 group-hover:text-primary/80 transition-colors">
-                          {job.role}
-                        </p>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {job.description}
-                        </p>
-                      </div>
-                      <div className="mt-4 md:mt-0 md:text-right flex-shrink-0">
-                        <span className="text-sm text-muted-foreground font-mono bg-muted/30 px-3 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
-                          {job.period}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <h4 className="text-lg mb-4 font-serif text-primary opacity-90">
-                        key contributions
-                      </h4>
-                      <div className="space-y-4">
-                        {job.achievements.map((achievement, i) => (
-                          <p
-                            key={i}
-                            className="text-muted-foreground leading-relaxed text-base border-l-2 border-muted/30 pl-4 group-hover:border-primary/30 transition-colors duration-300"
-                            style={{
-                              animation: `scaleIn 0.4s ease-out ${
-                                index * 0.2 + i * 0.1 + 0.3
-                              }s both`,
-                            }}
-                          >
-                            {achievement}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <JobCard key={job.slug} job={job} index={index} />
               ))}
             </div>
           </div>

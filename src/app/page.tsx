@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { useIntro } from "./_intro/IntroProvider";
 
 const ArrowIcon = () => (
   <svg
@@ -14,11 +18,28 @@ const ArrowIcon = () => (
   </svg>
 );
 
+function useRegisterSection(id: string) {
+  const ref = useRef<HTMLElement | null>(null);
+  const { registerSection } = useIntro();
+  useEffect(() => {
+    registerSection(id, ref.current);
+    return () => registerSection(id, null);
+  }, [id, registerSection]);
+  return ref;
+}
+
 export default function Home() {
+  const heroRef = useRegisterSection("hero");
+  const connectRef = useRegisterSection("connect");
+
   return (
     <div className="reflection-container pt-8 font-serif text-lg md:text-xl">
       {/* Hero Section */}
-      <section className="mb-[8rem] mt-[6rem]">
+      <section
+        ref={heroRef}
+        data-section-id="hero"
+        className="mb-[8rem] mt-[6rem] scroll-mt-24"
+      >
         <h1 className="text-7xl mb-8 leading-tight">
           hi friend, i'm soham sattigeri
         </h1>
@@ -175,7 +196,11 @@ export default function Home() {
       <div className="section-divider"></div>
 
       {/* Connect */}
-      <section className="mb-[6rem]">
+      <section
+        ref={connectRef}
+        data-section-id="connect"
+        className="mb-[6rem] scroll-mt-24"
+      >
         <h2 className="text-3xl mb-8">let's connect</h2>
         <div className="space-y-4">
           <p className="text-xl text-muted-foreground mb-6">

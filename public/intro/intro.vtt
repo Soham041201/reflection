@@ -1,0 +1,16 @@
+WEBVTT
+NOTE
+  Cue payload is JSON. Required: section (id from cues.ts).
+  Optional: company { name, url } to surface a confirm-to-open CTA.
+
+hero
+00:00:00.000 --> 00:00:16.000
+{"section":"hero"}
+
+kily
+00:00:16.000 --> 00:00:24.000
+{"section":"kily","company":{"name":"kily.ai","url":"https://kily.ai"}}
+
+kodo
+00:00:24.000 --> 00:00:36.000
+{"section":"kodo","company":{"name":"kodo","url":"https://kodo.com"}}
