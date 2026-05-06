@@ -41,6 +41,20 @@ const GithubIcon = () => (
 export default function Projects() {
   const projects = [
     {
+      title: "contextbliss",
+      description:
+        "a productivity awareness tool that quietly samples your webcam and screen every 30 seconds, classifies what you're working on with a multimodal model, and nudges you when you context-switch. ends the day with a synthesized timeline of how you actually spent it.",
+      category: "productivity",
+      status: "in progress",
+      highlights: [
+        "automatic context detection via a multimodal model — no manual tagging or timers",
+        "real-time spoken notifications when you switch tasks",
+        "daily dashboard with a synthesized summary and a timeline view of your day",
+        "multi-monitor and screen-share aware, with frames captured locally",
+      ],
+      demoUrl: "https://contextbliss.fly.dev/",
+    },
+    {
       title: "webdoc",
       description:
         "a claude-code–style cli agent that automates api documentation by observing real-time ui interactions. it correlates user actions with network calls using llm + vision to generate structured, human-readable documentation.",
